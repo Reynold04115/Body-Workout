@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONQUER | Iron & Will</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge glow-red">EST. 2026 // NO EXCUSES</div>
+            <h1 class="glitch">YOU ARE NOT HERE TO CONQUER THE WORLD</h1>
+            <p>You are here to conquer <span class="text-blue neon-blue">yourself.</span></p>
+            <a href="#stats-section" class="btn-primary">INITIALIZE PROTOCOL</a>
+        </div>
+    </header>
+
+    <section id="stats-section" class="section-transparent">
+        <div class="panel glass-panel">
+            <h2 class="neon-white">DEFINE YOUR STARTING POINT</h2>
+            <div class="input-grid">
+                <input type="number" id="userHeight" placeholder="Height (cm)" class="input-field">
+                <input type="number" id="userWeight" placeholder="Weight (kg)" class="input-field">
+                <select id="bodyType" class="input-field">
+                    <option value="" disabled selected>Select Body Type</option>
+                    <option value="skinny">Skinny</option>
+                    <option value="skinny-fat">Skinny Fat</option>
+                    <option value="fat">Fat</option>
+                    <option value="muscular">Muscular</option>
+                    <option value="aesthetic">Aesthetic</option>
+                </select>
+            </div>
+            <button onclick="generatePlan()" class="btn-action">ANALYZE & GENERATE</button>
+            
+            <div id="intel-box" class="hidden">
+                <h3 id="hype-quote" class="text-red font-black neon-red"></h3>
+                <p id="strategy-tip"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-transparent">
+        <div class="container">
+            <h2 class="text-center neon-white mb-2">THE ARSENAL</h2>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" onclick="filterWorkouts('all', this)">ALL</button>
+                <button class="filter-btn" onclick="filterWorkouts('chest', this)">CHEST</button>
+                <button class="filter-btn" onclick="filterWorkouts('back', this)">BACK</button>
+                <button class="filter-btn" onclick="filterWorkouts('legs', this)">LEGS</button>
+                <button class="filter-btn" onclick="filterWorkouts('core', this)">CORE</button>
+            </div>
+
+            <div id="workout-grid" class="grid">
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>CONQUER PROTOCOL &copy; 2026 // TRAIN INSANE OR REMAIN THE SAME</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
